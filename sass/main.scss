@@ -1,6 +1,6 @@
-@import './nav';
-@import './footer';
-@import './index';
+@import './nav/main';
+@import './footer/main';
+@import './index/main';
 
 @import './_vars';
 
@@ -26,11 +26,5 @@ body {
 }
 
 main {
-  width: 100%;
-}
-header {
-  box-sizing: border-box;
-  height: 50px;
-  background-color: #eaf4f9;
   width: 100%;
 }

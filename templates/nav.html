@@ -1,23 +1,34 @@
 <nav class="nav__container">
-  <a class="nav__logo-container" href="/">
-    <img class="nav__logo" src="./logo-50x40.png" alt="WiOS logo" />
-  </a>
+  <input type="checkbox" class="nav__toggle" id="nav__toggle" />
+
+  <div class="nav__header">
+    <a class="nav__logo-container" href="/">
+      <img class="nav__logo" src="./logo-50x40.png" alt="WiOS logo" />
+    </a>
+    <label class="nav__hamburger-menu" for="nav__toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
   <div class="nav__spacer"></div>
-  <ul class="nav__link-group">
-    <li class="nav__link-container">
+
+  <div class="nav__link-group">
+    <div class="nav__link-container">
       <a class="nav__link" href="/about/">About</a>
-    </li>
-    <li class="nav__link-container">
+    </div>
+    <div class="nav__link-container">
       <a class="nav__link" href="/blog/">Blog</a>
-    </li>
-    <li class="nav__link-container">
+    </div>
+    <div class="nav__link-container">
       <a class="nav__link" href="/community/">Community</a>
-    </li>
-    <li class="nav__link-container">
+    </div>
+    <div class="nav__link-container">
       <a class="nav__link" href="/contact/">Contact</a>
-    </li>
-    <li class="nav__link-container">
+    </div>
+    <div class="nav__link-container">
       <a class="nav__link" href="https://github.com/wiosc">GitHub</a>
-    </li>
-  </ul>
+    </div>
+  </div>
 </nav>

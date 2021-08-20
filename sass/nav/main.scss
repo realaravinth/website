@@ -1,10 +1,16 @@
-@import './_vars';
+@import '../_vars';
 
 .nav__container {
   display: flex;
   flex-direction: row;
-  height: 100%;
+
+  box-sizing: border-box;
+  background-color: $light-blue;
   width: 100%;
+}
+
+.nav__hamburger-menu {
+  display: none;
 }
 
 .nav__spacer {
@@ -14,6 +20,10 @@
 
 .nav__logo-container {
   display: inline-flex;
+}
+
+.nav__toggle {
+  display: none;
 }
 
 .nav__logo {
