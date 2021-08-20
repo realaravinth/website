@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>WiOS</title>
+  </head>
+  <body>
+    <header>
+      {% include "nav.html" %}
+    </header>
+    <!-- See ../sass/main.scss. Required for pushing footer to the very 
+      bottom of the page -->
+    <div class="main__content-container">
+      <main>
+        {% block content %} {% endblock %}
+      </main>
+      {% include "footer.html" %}
+    </div>
+  </body>
+  <link rel="stylesheet" href="main.css" />
+</html>

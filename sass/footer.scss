@@ -1,0 +1,32 @@
+@import './_vars';
+
+footer {
+  display: block;
+  background-color: beige;
+  color: black;
+}
+
+.footer__container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+.footer__column {
+  margin: auto;
+  list-style: none;
+  margin: auto;
+  display: flex;
+  margin: auto;
+}
+
+.footer__link-container {
+  margin: 5px;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: $dark-black;
+}
