@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://wios.co.in/sitemap.xml
