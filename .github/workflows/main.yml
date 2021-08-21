@@ -28,6 +28,4 @@ jobs:
         publish_dir: ./public
 
     - name: Deploy on netlify
-      with:
-        netlify_hook: ${{ secrets.GITHUB_TOKEN }}
-      run: curl -X POST -d {} $netlify_hook
+      run: curl -X POST -d {} ${{ secrets.NETLIFY_HOOK }}
