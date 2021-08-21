@@ -32,24 +32,11 @@
 
 
     <ul class="footer__column">
-      <li class="footer__link-container">
-        <a class="footer__link" href="/about">About</a>
-      </li>
-      <li class="footer__link-container">
-        <a class="footer__link" href="/blog">Blog</a>
-      </li>
-      <li class="footer__link-container">
-        <a class="footer__link" href="/community">Community</a>
-      </li>
-      <li class="footer__link-container">
-        <a class="footer__link" href="/contact">Contact</a>
-      </li>
-      <li class="footer__link-container">
-        <a class="footer__link" href="https://github.com/wiosc">GitHub</a>
-      </li>
-      <li class="footer__link-container">
-        <a class="footer__link" href="/sponsors">Sponsors</a>
-      </li>
+      {{ macros::social_link_icon(name="github", icon="/icons/github.svg") }}
+      {{ macros::social_link_icon(name="linkedin", icon="/icons/linkedin.svg") }}
+      {{ macros::social_link_icon(name="discord", icon="/icons/discord.svg") }}
+      {{ macros::social_link_icon(name="email", icon="/icons/mail.svg") }}
+      {{ macros::social_link_icon(name="instagram", icon="/icons/instagram.svg") }}
     </ul>
   </div>
 </footer>

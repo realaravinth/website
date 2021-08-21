@@ -5,3 +5,16 @@
 		{% endif %}
 	{% endfor %}
 {% endmacro social_link %}
+
+
+{% macro social_link_icon(name, icon) %}
+	{% for var in config.extra.socials %}
+		{% if var.name ==  name %}
+			  <li class="footer__link-container">
+				  <a class="footer__link" href="{{ var.link }}">
+					  <img class="footer__icon" src="{{ icon }}" alt="{{ var.name }} icon ">
+				  </a>
+			  </li>
+		{% endif %}
+	{% endfor %}
+{% endmacro social_link_icon %}
