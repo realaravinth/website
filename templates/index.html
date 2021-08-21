@@ -1,12 +1,16 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} {% block title %}
+<title>Home | WiOS</title>
+{% endblock content %} {% block content %}
 
 <div class="banner">
   <img class="banner__logo" src="/logo-100x100.png" alt="WiOS logo" />
   <h1 class="banner__title">Women in Open Source</h1>
   <p class="banner__tagline">Cogito, ergo sum</p>
-  <form class="banner__action" target="_blank"
-			action="{{ macros::social_link(name='discord') }}"
-	  >
+  <form
+    class="banner__action"
+    target="_blank"
+    action="{{ macros::social_link(name='discord') }}"
+  >
     <button class="banner__action-btn">Come say hi!</button>
   </form>
 </div>
