@@ -24,6 +24,9 @@ footer {
 .footer__link-container {
   margin: 5px;
 }
+.license__conatiner {
+	display: flex;
+}
 
 .footer__link {
   text-decoration: none;
@@ -31,7 +34,7 @@ footer {
 }
 
 .license__link {
-  color: #943246;
+  color: $deep-red;
 }
 
 .footer__column-divider {
