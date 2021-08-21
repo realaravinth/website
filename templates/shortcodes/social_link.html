@@ -1,0 +1,6 @@
+{% set name = name %}
+{% for var in config.extra.socials %}
+	{% if var.name ==  name %}
+		{{ var.link }}
+	{% endif %}
+{% endfor %}
