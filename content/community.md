@@ -2,11 +2,9 @@
 title = "Community"
 +++
 
-## Discord
+We are available on the following platforms
 
-Join us at our [Discord server](https://discord.gg/Pq2r3hNe")
-
-
-## GitHub
-
-Checkout our GitHub: [@WiOSc](https://github.com/WiOSc)
+- **Discord:** {{ socials(name="discord", text="Discord server") }}
+- **GitHub:** {{ socials(name="github", text="@WiOSc") }}
+- **LinkedIn:**  {{ socials(name="linkedin", text="Women in Open Source VIT AP") }}
+- **Instagram:**  {{ socials(name="instagram", text="@wios_vitap") }}

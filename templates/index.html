@@ -6,7 +6,11 @@
   <p class="banner__tagline">Cogito, ergo sum</p>
   <form
     class="banner__action"
-    action="https://discord.gg/Pq2r3hNe"
+	{% for var in config.extra.socials %}
+		{% if var.name ==  "discord" %}
+			action="{{ var.link }}"
+		{% endif %}
+	{% endfor %}
     target="_blank"
   >
     <button class="banner__action-btn">Come say hi!</button>
