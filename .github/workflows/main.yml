@@ -21,8 +21,13 @@ jobs:
     - name: Build production website
       run: ./scripts/ci.sh build
 
-    - name: Deploy
+    - name: Push to gh-pages branch
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./public
+
+    - name: Deploy on netlify
+      with:
+        netlify_hook: ${{ secrets.GITHUB_TOKEN }}
+      run: curl -X POST -d {} $netlify_hook
