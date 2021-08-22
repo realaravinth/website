@@ -18,5 +18,6 @@ socials = [
 	{"name" = "discord", "link"  =  "https://discord.gg/Pq2r3hNe"}, 
 	{"name" = "github", "link"  =  "https://github.com/WiOSc"}, 
 	{ "name" = "linkedin", "link" = "https://www.linkedin.com/company/women-in-open-source-vit-ap"}, 
-	{ "name" = "email", "link" = "wios@vitap.ac.in"}
+	{ "name" = "email", "link" = "wios@vitap.ac.in"},
+	{ "name" = "youtube", "link" = "https://www.youtube.com/channel/UCc7KEMTSZaCVq-vKF9vkwQw" }
 ]
