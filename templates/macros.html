@@ -1,26 +1,38 @@
 {% macro social_link(name) %}
-	{% for var in config.extra.socials %}
-		{% if var.name ==  name %}
-			{{ var.link }}
-		{% endif %}
-	{% endfor %}
+  {% for var in config.extra.socials %}
+	{% if var.name ==  name %}
+      {{ var.link }}
+	{% endif %}
+  {% endfor %}
 {% endmacro social_link %}
 
-
-{% macro social_link_icon(name, icon) %}
-	{% for var in config.extra.socials %}
-		{% if var.name ==  name %}
-			  <li class="footer__link-container">
-				  <a class="footer__link" href="{{ var.link }}">
-					  <img class="footer__icon" src="{{ icon }}" alt="{{ var.name }} icon ">
-				  </a>
-			  </li>
-		{% endif %}
-	{% endfor %}
-{% endmacro social_link_icon %}
 
 {% macro nav_link(link, name) %}
   <div class="nav__link-container">
     <a class="nav__link" href="{{ link }}">{{ name }}</a>
   </div>
 {% endmacro nav_link %}
+
+{% macro cache_bust(path) %}
+  {{ get_url(path=path, cachebust=true) }}" 
+{% endmacro cache_bust %}
+
+{% macro social_link_icon(name, icon) %}
+  {% for var in config.extra.socials %}
+    {% if var.name ==  name %}
+	  {% if var.name == "email"  %}
+        <li class="footer__link-container">
+          <a class="footer__link" href="mailto:{{ var.link }}">
+            <img class="footer__icon" src="{{ macros::cache_bust(path=icon) }}" alt="{{ var.name }} icon ">
+          </a>
+		</li>
+	  {% else %}
+		<li class="footer__link-container">
+          <a class="footer__link" href="{{ var.link }}">
+            <img class="footer__icon" src="{{ macros::cache_bust(path=icon) }}" alt="{{ var.name }} icon ">
+          </a>
+		</li>
+	  {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endmacro social_link_icon %}

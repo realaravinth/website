@@ -14,9 +14,9 @@ highlight_code = true
 
 [extra]
 socials = [ 
-{ "name" = "instagram", "link" = "https://instagram.com/wios_vitap"}, 
-{"name" = "discord", "link"  =  "https://discord.gg/Pq2r3hNe"}, 
-{"name" = "github", "link"  =  "https://github.com/WiOSc"}, 
-{ "name" = "linkedin", "link" = "https://www.linkedin.com/company/women-in-open-source-vit-ap"}, 
-{ "name" = "email", "link" = "wios@vitap.ac.in"}
+	{ "name" = "instagram", "link" = "https://instagram.com/wios_vitap"}, 
+	{"name" = "discord", "link"  =  "https://discord.gg/Pq2r3hNe"}, 
+	{"name" = "github", "link"  =  "https://github.com/WiOSc"}, 
+	{ "name" = "linkedin", "link" = "https://www.linkedin.com/company/women-in-open-source-vit-ap"}, 
+	{ "name" = "email", "link" = "wios@vitap.ac.in"}
 ]
