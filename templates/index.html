@@ -1,9 +1,17 @@
-{% extends "base.html" %} {% block title %}
+{% extends "base.html" %} {% block meta %}
 <title>Home | WiOS</title>
+<meta
+  name="description"
+  content="WiOS(Women in Open Source), a VIT AP based chapter that is focused on bringing gender diversity in technology and promoting the usage of open-source development."
+/>
 {% endblock content %} {% block content %}
 
 <div class="banner">
-	<img class="banner__logo" src="{{ macros::cache_bust(path='/logo-100x100.png') }}" alt="WiOS logo" />
+  <img
+    class="banner__logo"
+    src="{{ macros::cache_bust(path='/logo-100x100.png') }}"
+    alt="WiOS logo"
+  />
   <h1 class="banner__title">Women in Open Source</h1>
   <p class="banner__tagline">Cogito, ergo sum</p>
   <form
