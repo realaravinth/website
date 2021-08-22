@@ -27,5 +27,6 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./public
 
-    - name: Deploy on netlify
-      run: curl -X POST -d {} ${{ secrets.NETLIFY_HOOK }}
+          #    2021-08-22 10:43: netlify watches changes on gh-pages
+          #    - name: Deploy on netlify
+          #      run: curl -X POST -d {} ${{ secrets.NETLIFY_HOOK }}
