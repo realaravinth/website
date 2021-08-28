@@ -4,29 +4,33 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-18.04
 
     steps:
-    - uses: actions/checkout@v2
-      with:
-        submodules: true
-        fetch-depth: 0
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
 
-    - name: Install Zola
-      run: ./scripts/ci.sh install
+      - name: Install Zola
+        run: ./scripts/ci.sh install
 
-    - name: Build production website
-      run: ./scripts/ci.sh build
+      - name: Build production website
+        run: ./scripts/ci.sh build
 
-    - name: Push to gh-pages branch
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./public
-
-          #    2021-08-22 10:43: netlify watches changes on gh-pages
-          #    - name: Deploy on netlify
-          #      run: curl -X POST -d {} ${{ secrets.NETLIFY_HOOK }}
+      - name: Push to gh-pages branch
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir:
+            ./public
+            #    2021-08-22 10:43: netlify watches changes on gh-pages
+            #    - name: Deploy on netlify
+            #      run: curl -X POST -d {} ${{ secrets.NETLIFY_HOOK }}
