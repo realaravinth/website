@@ -1,12 +1,12 @@
 @import '../_vars';
 
 .page__link-list {
-    margin-top: 1em;
+    margin-top: 1rem;
     list-style-type: none;
 }
 
 .page__link-list>li {
-    padding: 1em;
+    padding: 1rem;
 }
 
 .link-list__item {
@@ -14,14 +14,14 @@
 }
 
 .link-list__item >h2 {
-    font-size: 1.4em;
+    font-size: 1.4rem;
     color: $dark-black;
 }
 
 .link-list__item>h2:hover{
     color: $deep-red;
     // transition-delay: 20ms;
-    transition-duration: .3s;
+    transition-duration: $std-trans;
 }
 
 .link-list__stray {
@@ -32,5 +32,5 @@
 
 .link-list__stray:hover {
     color: $deep-red;
-    transition-duration: .3s;
+    transition-duration: $std-trans;
 }
