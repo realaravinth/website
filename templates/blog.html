@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% block meta %}
+<title>Blogs | WiOS</title>
+<meta
+  name="description"
+  content="WiOS(Women in Open Source), a VIT AP based chapter that is focused on bringing gender diversity in technology and promoting the usage of open-source development."
+/>
+
+{% endblock content %} {% block content %}
+<div class="page__container">
+    <h1 class="page__group-title">{{ section.title }}</h1>
+    <div class="page__group-content">
+        <div>
+            <ul class="page__link-list">
+                {% for page in section.pages %}                
+                    <li>
+                        <a href="{{ page.permalink | safe }}" class="link-list__item"><h2>{{ page.title }}</h2></a>
+                        <p>{{  page.date }} : : {{ page.extra.author }}</p>
+                        <span>{{ page.summary | replace(from="<p>", to="") }}</span>
+                        <a href="{{ page.permalink }}#continue-reading" class="link-list__stray">>></a>
+                    </li>
+                                    
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock content %}
