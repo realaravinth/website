@@ -15,7 +15,7 @@ The term originated with regards to software development to assign a specific ap
 Open source supports universal access to a product's design or blueprints via an open-source or libre license, as well as universal redistribution of that design or blueprint. The open-source model is a decentralized software-development model that encourages open collaboration.
 
 ## What is Open-Source?
-![Table](/blog/blog1/img3.png)
+![OSC](/blog/blog1/img3.png)
 
 Open source is source code that is made unreservedly accessible for possible modification and redistribution. Products include permission to use the source code, design documents, or content of the product. Generally, open source refers to a computer program in which the source code is available to the general public for use or modification from its original design. Code is released under the terms of a software license. Depending on the license terms, others may then download, modify, and publish their version back to the community.
 
@@ -26,7 +26,21 @@ Open-source software is software with source code that anyone can inspect, modif
 
 Many open-source projects have a high economic value. According to the Battery Open-Source Software Index (BOSS), the ten economically most important open source projects are:
 
-![Table](/blog/blog1/img1.png)
+<!-- ![Table](/blog/blog1/img1.png) -->
+
+|Ranking|Project|Leading Company|Market Value|
+|:--- | :--- | :---| :---|
+|1|Linux|Red Hat|$16 billion|
+|2|Git|Github|$2 billion|
+|3|MySQL|Oracle|$1.87 billion|
+|4|Node.js|NodeSource|?|
+|5|Docker|Docker|$1 billion|
+|6|Hadoop|Cloudera|$3 billion|
+|7|Elasticsearch|Elastic|$700 million|
+|8|Spark|Databricks|$513 million|
+|9|MongoDB|MongoDB|$1.57 billion|
+|10|Selenium|Sauce Labs|$470 million|
+
 
 ## Advantages of using open source software
 
