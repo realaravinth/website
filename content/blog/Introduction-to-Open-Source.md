@@ -1,7 +1,7 @@
 +++
-title = "Open-Source"
+title = "Introduction to Open-Source"
 date = 2021-08-24
-description = "Idli World"
+description = "A blog describing Open-Source"
 [extra]
 author = "Dhruva Rakesh B"
 +++
