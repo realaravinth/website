@@ -1,0 +1,36 @@
+@import '../_vars';
+
+.page__link-list {
+    margin-top: 1em;
+    list-style-type: none;
+}
+
+.page__link-list>li {
+    padding: 1em;
+}
+
+.link-list__item {
+    text-decoration: none;
+}
+
+.link-list__item >h2 {
+    font-size: 1.4em;
+    color: $dark-black;
+}
+
+.link-list__item>h2:hover{
+    color: $deep-red;
+    // transition-delay: 20ms;
+    transition-duration: .3s;
+}
+
+.link-list__stray {
+    text-decoration: none;
+    font-weight: bolder;
+    color: $light-red;
+}
+
+.link-list__stray:hover {
+    color: $deep-red;
+    transition-duration: .3s;
+}
