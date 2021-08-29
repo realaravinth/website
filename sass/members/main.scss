@@ -1,12 +1,9 @@
 @import '../_vars';
 
-.page__group-title {
+h1.title {
    text-align: center;
-   padding-bottom: 15px;
-}
-
-.page__container {
-   width: 100%;
+   padding: 15px 0;
+   color: $dark-black;
 }
 
 .team {
