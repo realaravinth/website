@@ -2,14 +2,14 @@
   height: 50vh;
 }
 
-.banner__action-btn {
-  margin: auto;
-  border: none;
-  color: #fff;
-  background-color: #4f5a66;
+@mixin btn {
   padding: 10px;
-  font-size: 1em;
+  font-size: 1.2rem;
   border-radius: 5px;
+}
+
+.banner__action-btn {
+  @include btn;
 }
 
 .banner__logo {
@@ -44,6 +44,10 @@
   margin: 10px;
 }
 
+.main__group-content-title {
+  text-align: center;
+}
+
 .main__group-content {
   flex-direction: column;
 }
@@ -57,8 +61,7 @@
   height: auto;
 
   .main__group-action {
-    padding: 10px;
-    font-size: 1.2rem;
+    @include btn;
   }
 }
 
@@ -67,6 +70,6 @@
   overflow: hidden;
   padding: 20px;
   padding-bottom: 0px;
-  width: 80%;
+  width: 70%;
   margin: auto;
 }
