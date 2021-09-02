@@ -5,9 +5,9 @@
   content="WiOS(Women in Open Source), a VIT AP based chapter that is focused on bringing gender diversity in technology and promoting the usage of open-source development."
 />
 
-{% endblock content %} {% block content %}
+{% endblock meta %} {% block content %}
 <div class="page__container">
-    <h1 class="page__group-title">{{ section.title }}</h1>
+    <h1 class="page__group-title--blog">{{ section.title }}</h1>
     <div class="page__group-content">
         <div>
             <ul class="page__link-list">
@@ -20,10 +20,13 @@
                           alt="blog post banner"
                         />
                         <h2>{{ page.title }}</h2>
-                        <span>{{ page.summary | replace(from="<p>", to="") }}</span>
+						<span>{{ page.description | safe }} </span>
+						
                         <p class="link-list__meta">
-                          Posted {{  page.day }} {{ macros::get_month(month=page.month) }},
-                          {{ page.year }} by {{ page.extra.author }} - <b>{{ page.reading_time }} min read</b>
+                          Posted {{  page.day }} 
+						  {{ macros::get_month(month=page.month) }},
+                          {{ page.year }} by {{ page.extra.author }} 
+						  - <b>{{ page.reading_time }} min read</b>
                         </p>
                     </li>
                   </a>

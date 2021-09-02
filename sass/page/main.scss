@@ -13,7 +13,6 @@
 
 .page__group-title {
   margin: 20px auto;
-  text-align: center;
   color: $dark-black;
 }
 
@@ -51,11 +50,6 @@
   }
 }
 
-.page__group-content table > tbody > tr {
-  //  border-top: 1px solid black;
-}
-
-
 .page__group-content > p,
 .page__group-content > h2,
 .page__group-content > h3 {
@@ -64,6 +58,6 @@
 }
 
 .page__banner {
-	width: 100%;
-	margin: 20px auto;
+  width: 100%;
+  margin: 20px auto;
 }

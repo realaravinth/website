@@ -1,7 +1,7 @@
 +++
 title = "Introduction to Open-Source"
 date = 2021-08-24
-description = "What is open source? Why Open source? Read on to find out!"
+description = "Open source is the latest trend in software development but what is open source? Read on to find out!"
 
 [extra]
 author = "Dhruva Rakesh B"

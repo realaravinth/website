@@ -16,17 +16,10 @@
               src="{{ page.extra.banner }}"
               alt="blog post banner"
             />
-            <div class="blog-preview__content-container">
               <h3 class="blog-preview__title">{{ page.title }}</h3>
-              <p class="blog-preview__meta">
-                Posted {{ page.day }} {{ macros::get_month(month=page.month) }},
-                {{ page.year }} by {{ page.extra.author }} -
-                <b>{{ page.reading_time }} min read</b>
-              </p>
+              <p class="blog-preview__meta">{{ page.reading_time }} min read</p>
 
-              <p class="blog-preview__lead">
-              {{ page.summary | replace(from="<p>", to="") | truncate(length=100) }}</p>
-            </div>
+              <p class="blog-preview__lead">{{ page.description | safe }} </p>
           </li>
         </a>
         {% set count = count + 1 %} {% if count == 1 %} {% break %} {% endif %}
