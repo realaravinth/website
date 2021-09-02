@@ -1,9 +1,11 @@
 +++
 title = "Introduction to Open-Source"
 date = 2021-08-24
-description = "A blog describing Open-Source"
+description = "What is open source? Why Open source? Read on to find out!"
+
 [extra]
 author = "Dhruva Rakesh B"
+banner = "/blog/blog1/img3.png"
 +++
 
 The term open source refers to something people can modify and share because its design is publicly accessible. The open-source model is a decentralized software-development model that encourages open collaboration. Its mainly used to describe software. The user can also make changes in the source code of such software and customize it according to their use. <!-- more -->
@@ -15,7 +17,6 @@ The term originated with regards to software development to assign a specific ap
 Open source supports universal access to a product's design or blueprints via an open-source or libre license, as well as universal redistribution of that design or blueprint. The open-source model is a decentralized software-development model that encourages open collaboration.
 
 ## What is Open-Source?
-![OSC](/blog/blog1/img3.png)
 
 Open source is source code that is made unreservedly accessible for possible modification and redistribution. Products include permission to use the source code, design documents, or content of the product. Generally, open source refers to a computer program in which the source code is available to the general public for use or modification from its original design. Code is released under the terms of a software license. Depending on the license terms, others may then download, modify, and publish their version back to the community.
 

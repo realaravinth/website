@@ -7,6 +7,7 @@
 {% endblock content %} {% block content %}
 
 <div class="page__container">
+  <img class="page__banner" src="{{ page.extra.banner }}" alt="blog post banner" />
   <h1 class="page__group-title">{{ page.title }}</h1>
   <div class="page__group-content">
     {{ page.content | safe }}
