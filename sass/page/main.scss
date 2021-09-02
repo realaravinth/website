@@ -1,7 +1,7 @@
 @import '../_vars';
 
 .page__container {
-  width: 80%;
+  width: 50%;
   margin: auto;
   padding: 50px 0;
 }
@@ -12,7 +12,7 @@
 }
 
 .page__group-title {
-  margin: auto;
+  margin: 20px auto;
   color: $dark-black;
 }
 
@@ -21,9 +21,43 @@
   flex-direction: column;
 }
 
+.page__group-content img {
+  width: 100%;
+  margin: auto;
+}
+
+.page__group-content table {
+  border-collapse: collapse;
+  caption-side: bottom;
+  border-color: #e9ecef;
+  text-align: center;
+}
+
+.page__group-content table > thead {
+  vertical-align: bottom;
+  border-bottom: 1px solid #cdc8ca;
+  text-align: center;
+}
+
+.page__group-content table {
+  th {
+    text-align: center;
+  }
+  td {
+    margin: auto;
+    padding: 10px;
+    border-bottom: 1px solid #edddd1;
+  }
+}
+
 .page__group-content > p,
 .page__group-content > h2,
 .page__group-content > h3 {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.page__banner {
+  width: 100%;
+  margin: 20px auto;
 }

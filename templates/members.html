@@ -1,44 +1,53 @@
-{% extends "base.html" %}
-
-{% block content %}
-
-{% set members = load_data(path="content/members/data.csv") %}
+{% extends "base.html" %} {% block content %} {% set members =
+load_data(path="content/members/data.csv") %}
 
 <h1 class="title">{{ section.title }}</h1>
 
 <div class="team">
-{% set index = 24 %}
-{% for record in range(end=index) %}
-    <div class="member">
-    <img src="{{ members.records[record][2] }}" />
+  {% set index = 24 %} {% for record in range(end=index) %}
+  <div class="member">
+    <img src="{{ members.records[record][2] }}" alt="{{ members.records[record][0] }}" />
     <div class="info-card">
-    <p class="title">{{ members.records[record][0] }}</p>
-    <p class="subtitle"> {{ members.records[record][1] }} </p>
+      <p class="title">{{ members.records[record][0] }}</p>
+      <p class="subtitle">{{ members.records[record][1] }}</p>
     </div>
     <ul class="socials">
-        {% if members.records[record][3] %}
-        <li><a href="{{ members.records[record][3] }}" target="_blank"><img src="/icons/globe.svg"></a></li>
-        {% endif %}
-        {% if members.records[record][4] %}
-        <li><a href="{{ members.records[record][4] }}" target="_blank"><img src="/icons/linkedin.svg"></a></li>
-        {% endif %}
-        {% if members.records[record][5] %}
-        <li><a href="{{ members.records[record][5] }}" target="_blank"><img src="/icons/github.svg"></a></li>
-        {% endif %}
-        {% if members.records[record][6] %}
-        <li><a href="{{ members.records[record][6] }}" target="_blank"><img src="/icons/instagram.svg"></a></li>
-        {% endif %}
-        {% if members.records[record][7] %}
-        <li><a href="{{ members.records[record][7] }}" target="_blank"><img src="/icons/discord.svg"></a></li>
-        {% endif %}
+      {% if members.records[record][3] %}
+      <li>
+        <a href="{{ members.records[record][3] }}" target="_blank"
+          ><img src="/icons/globe.svg" alt="Website icon"
+        /></a>
+      </li>
+      {% endif %} {% if members.records[record][4] %}
+      <li>
+        <a href="{{ members.records[record][4] }}" target="_blank"
+          ><img src="/icons/linkedin.svg" alt="LinkedIn icon"
+        /></a>
+      </li>
+      {% endif %} {% if members.records[record][5] %}
+      <li>
+        <a href="{{ members.records[record][5] }}" target="_blank"
+          ><img src="/icons/github.svg" alt="GitHub icon"
+        /></a>
+      </li>
+      {% endif %} {% if members.records[record][6] %}
+      <li>
+        <a href="{{ members.records[record][6] }}" target="_blank"
+          ><img src="/icons/instagram.svg" alt="Instagram icon"
+        /></a>
+      </li>
+      {% endif %} {% if members.records[record][7] %}
+      <li>
+        <a href="{{ members.records[record][7] }}" target="_blank"
+          ><img src="/icons/discord.svg"alt="Discord icon"
+        /></a>
+      </li>
+      {% endif %}
     </ul>
+  </div>
+  {% if members.records[record][8] %}
+  <div class="break"></div>
+  {% endif %} {% endfor %}
 </div>
-{% if members.records[record][8] %}
-    <div class="break"></div>
-{% endif %}    
-{% endfor %} 
-</div>
- 
+
 {% endblock content %}
-
-

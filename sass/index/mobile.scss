@@ -1,5 +1,15 @@
-.banner__title {
-  text-align: center;
+.banner {
+  height: 50vh;
+}
+
+@mixin btn {
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+.banner__action-btn {
+  @include btn;
 }
 
 .banner__logo {
@@ -9,8 +19,23 @@
   margin: 20px 0px;
 }
 
+.banner__tagline {
+  font-size: 1.2rem;
+}
+
 .main__group-title {
   text-align: center;
+  font-size: 2rem;
+}
+
+.banner__title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.main__group {
+  height: 73vh;
+  width: 90%;
 }
 
 .main__group-content,
@@ -19,6 +44,32 @@
   margin: 10px;
 }
 
+.main__group-content-title {
+  text-align: center;
+}
+
 .main__group-content {
   flex-direction: column;
+}
+
+.main__group-content-img {
+  padding: 10px;
+}
+
+.main__group--card {
+  flex-direction: column;
+  height: auto;
+
+  .main__group-action {
+    @include btn;
+  }
+}
+
+.blog-preview__post {
+  height: 45vh;
+  overflow: hidden;
+  padding: 20px;
+  padding-bottom: 0px;
+  width: 70%;
+  margin: auto;
 }

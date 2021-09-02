@@ -5,20 +5,31 @@
   content="WiOS(Women in Open Source), a VIT AP based chapter that is focused on bringing gender diversity in technology and promoting the usage of open-source development."
 />
 
-{% endblock content %} {% block content %}
+{% endblock meta %} {% block content %}
 <div class="page__container">
-    <h1 class="page__group-title">{{ section.title }}</h1>
+    <h1 class="page__group-title--blog">{{ section.title }}</h1>
     <div class="page__group-content">
         <div>
             <ul class="page__link-list">
                 {% for page in section.pages %}                
+                  <a href="{{ page.permalink | safe }}" class="link-list__item">
                     <li>
-                        <a href="{{ page.permalink | safe }}" class="link-list__item"><h2>{{ page.title }}</h2></a>
-                        <p>{{  page.date }} : : {{ page.extra.author }}</p>
-                        <span>{{ page.summary | replace(from="<p>", to="") }}</span>
-                        <a href="{{ page.permalink }}#continue-reading" class="link-list__stray">>></a>
+                        <img 
+                          class="page__banner" 
+                          src="{{ page.extra.banner }}" 
+                          alt="blog post banner"
+                        />
+                        <h2>{{ page.title }}</h2>
+						<span>{{ page.description | safe }} </span>
+						
+                        <p class="link-list__meta">
+                          Posted {{  page.day }} 
+						  {{ macros::get_month(month=page.month) }},
+                          {{ page.year }} by {{ page.extra.author }} 
+						  - <b>{{ page.reading_time }} min read</b>
+                        </p>
                     </li>
-                                    
+                  </a>
                 {% endfor %}
             </ul>
         </div>
