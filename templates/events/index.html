@@ -1,0 +1,37 @@
+{% extends "base.html" %} {% block meta %}
+<title>Blogs | WiOS</title>
+<meta
+  name="description"
+  content="WiOS(Women in Open Source), a VIT AP based chapter that is focused on bringing gender diversity in technology and promoting the usage of open-source development."
+/>
+
+{% endblock meta %} {% block content %}
+<div class="page__container">
+    <h1 class="page__group-title--blog">{{ section.title }}</h1>
+    <div class="page__group-content">
+        <div>
+            <ul class="page__link-list">
+                {% for page in section.pages %}                
+                  <a href="{{ page.permalink | safe }}" class="link-list__item">
+                    <li>
+                        <img 
+                          class="page__banner" 
+                          src="{{ page.extra.banner }}" 
+                          alt="blog post banner"
+                        />
+                        <h2>{{ page.title }}</h2>
+						<span>{{ page.description | safe }} </span>
+						
+                        <p class="link-list__meta">
+                          On {{  page.day }} 
+						  {{ macros::get_month(month=page.month) }},
+                          {{ page.year }}
+                        </p>
+                    </li>
+                  </a>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock content %}
