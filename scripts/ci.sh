@@ -35,6 +35,7 @@ OPTIONS:
   c   clean     clean dependencies and build artifacts
   h   help      print this help menu
   i   install   install build dependencies
+  u   url       make urls relative
   z   zola      invoke zola
 EOF
 }
@@ -85,6 +86,10 @@ build() {
 	run build
 }
 
+no_absolute_url() {
+	sed -i 's/https:\/\/staging.wios.co.in//g' $(find public -type f | grep html)
+}
+
 clean() {
 	rm -rf $BIN_PATH || true
 	rm -rf $DIST || true
@@ -105,6 +110,9 @@ then
 elif match_arg $1 'h' 'help'
 then
 	help
+elif match_arg $1 'u' 'url'
+then 
+	no_absolute_url
 elif match_arg $1 'z' 'zola'
 then
 	$BIN "${@:3}"

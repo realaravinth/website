@@ -1,5 +1,6 @@
 .banner {
-  height: 50vh;
+  height: 320px;
+  box-sizing: content-box;
 }
 
 @mixin btn {
@@ -41,7 +42,7 @@
 .main__group-content,
 .main__group-content--right,
 .main__group-content--left {
-  margin: 10px;
+  margin: 5px;
 }
 
 .main__group-content-title {
