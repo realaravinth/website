@@ -1,0 +1,30 @@
+<section class="main__group--card-coral">
+  <div class="main__group-title">
+    <h2>Latest events</h2>
+  </div>
+  <div class="main__group-content">
+      {% for subsection in section.subsections %} 
+	  {% set s = get_section(path=subsection) %} 
+	  {% if s.title == "Events" %}
+        {% set count = 0 %} {% for page in s.pages %}
+		  {% set x = page.extra.youtube %}
+        <a href="{{ page.permalink | safe }}" class="blog-preview__post-link">
+				{% if page.extra.youtube %}
+                  {% set id= page.extra.youtube | split(pat="https://www.youtube.com/watch?v=") | nth(n=1) %}
+                      <iframe 
+                        width="560"
+                        height="315"
+						class="event-preview__youtube-link"
+                        src="https://www.youtube-nocookie.com/embed/{{ id }}" 
+                        title="YouTube video player" 
+                        frameborder="0"
+                        allow="picture-in-picture" 
+                        allowfullscreen>
+                      </iframe>
+				{% endif %}
+          </a>
+        {% endfor %}
+		<a href="./events" class="main__group-action">View all events</a>
+      {% endif %} {% endfor %}
+    </div>
+</section>
