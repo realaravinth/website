@@ -1,9 +1,8 @@
 {% extends "base.html" %} {% block meta %}
-<title>Blogs | WiOS</title>
-<meta
-  name="description"
-  content="WiOS(Women in Open Source), a VIT AP based chapter that is focused on bringing gender diversity in technology and promoting the usage of open-source development."
-/>
+
+{% set title = "Posts" %}
+{% set description = title ~ " | " ~ config.extra.description %}
+{{ macros::get_meta_tags(title=title, description=description) }}
 
 {% endblock meta %} {% block content %}
 <div class="page__container">

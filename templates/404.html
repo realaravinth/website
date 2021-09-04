@@ -1,5 +1,9 @@
 {% extends "base.html" %} {% block title %}
-<title>404 | WiOS</title>
+
+{% set title = "Page not found" %}
+{% set description = title ~ " | " ~ config.extra.description %}
+{{ macros::get_meta_tags(title=title, description=description) }}
+
 {% endblock meta %} {% block content %}
 <div class="page__container">
   <h2 class="page__group-title">HTTP 404: Page not found</h2>

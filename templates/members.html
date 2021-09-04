@@ -1,5 +1,12 @@
-{% extends "base.html" %} {% block content %} {% set members =
-load_data(path="content/members/data.csv") %}
+{% extends "base.html" %} {% block meta %} 
+
+{% set title = "Members" %}
+{% set description = title ~ " | " ~ config.extra.description %}
+{{ macros::get_meta_tags(title=title, description=description) }}
+
+{% endblock meta %} {% block content %} 
+
+{% set members = load_data(path="content/members/data.csv") %}
 
 <h1 class="title">{{ section.title }}</h1>
 
