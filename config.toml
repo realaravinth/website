@@ -13,6 +13,7 @@ build_search_index = false
 highlight_code = true
 
 [extra]
+description = "WiOS(Women in Open Source), a VIT AP based chapter that is focused on bringing gender diversity in technology and promoting the usage of open-source development."
 socials = [ 
 	{ "name" = "instagram", "link" = "https://instagram.com/wios_vitap"}, 
 	{"name" = "discord", "link"  =  "https://discord.gg/xpJrzF2VCk"},
