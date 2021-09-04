@@ -1,4 +1,4 @@
-{% set id= page.extra.youtube | split(pat="https://www.youtube.com/watch?v=") | nth(n=1) %}
+{% set id= link | split(pat="https://www.youtube.com/watch?v=") | nth(n=1) %}
   <div>
       <iframe 
         width="560"

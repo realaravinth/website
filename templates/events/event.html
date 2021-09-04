@@ -7,17 +7,19 @@
 {% endblock meta %} {% block content %}
 
 <div class="page__container">
-  <img class="page__banner" src="{{ page.extra.banner }}" alt="blog post banner" />
+  <img
+    class="page__banner"
+    src="{{ page.extra.banner }}"
+    alt="blog post banner"
+  />
   <h1 class="page__group-title">{{ page.title }}</h1>
-	<p class="link-list__meta">
-      On {{  page.day }} {{ macros::get_month(month=page.month) }},
-        {{ page.year }} 
-	</p>
+  <p class="link-list__meta">
+    On {{ page.day }} {{ macros::get_month(month=page.month) }}, {{ page.year }}
+  </p>
   <div class="page__group-content">
-    {% if page.extra.youtube %}
-      {{ macros::embed_youtube(link=page.extra.youtube) }}
-    {% endif %}
-    {{ page.content | safe }}
+    {% if page.extra.youtube %} {{
+    macros::embed_youtube(link=page.extra.youtube) }} {% endif %} {{
+    page.content | safe }}
   </div>
 </div>
 
