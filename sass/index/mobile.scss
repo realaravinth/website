@@ -1,12 +1,21 @@
-.banner {
-  height: 320px;
-  box-sizing: content-box;
-}
-
 @mixin btn {
   padding: 10px;
   font-size: 1.2rem;
   border-radius: 5px;
+}
+
+@mixin main__group--card {
+  flex-direction: column;
+  height: auto;
+
+  .main__group-action {
+    @include btn;
+  }
+}
+
+.banner {
+  height: 320px;
+  box-sizing: content-box;
 }
 
 .banner__action-btn {
@@ -57,15 +66,6 @@
   padding: 10px;
 }
 
-.main__group--card {
-  flex-direction: column;
-  height: auto;
-
-  .main__group-action {
-    @include btn;
-  }
-}
-
 .blog-preview__post {
   height: 45vh;
   overflow: hidden;
@@ -73,4 +73,15 @@
   padding-bottom: 0px;
   width: 70%;
   margin: auto;
+}
+
+.main__group--sponsors,
+.main__group--card-beige,
+.main__group--card-coral {
+  @include main__group--card;
+}
+
+.event-preview__youtube-link {
+  height: 150px;
+  width: 95%;
 }
