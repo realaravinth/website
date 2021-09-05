@@ -6,8 +6,8 @@
 {% endblock meta %} {% block content %}
 
 <div class="page__container">
-  <img class="bog__banner" src="{{ page.extra.banner }}" alt="blog post banner" />
-  <h1 class="blog__group-title">{{ page.title }}</h1>
+  <img class="page__banner" src="{{ page.extra.banner }}" alt="blog post banner" />
+  <h1 class="page__group-title">{{ page.title }}</h1>
 	<p class="blog__meta">
       Posted {{  page.day }} {{ macros::get_month(month=page.month) }},
         {{ page.year }} by {{ page.extra.author }} 

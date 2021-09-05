@@ -1,3 +1,4 @@
+@import '../components/page';
 .link-list__item,
 .link-list__item:visited {
   // see https://github.com/sass/node-sass/issues/2815
@@ -8,4 +9,8 @@
 
 .link-list__meta {
   font-size: 0.7rem;
+}
+
+.blog__content {
+  @include md_mobile;
 }
