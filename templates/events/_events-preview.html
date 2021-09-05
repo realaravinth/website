@@ -8,7 +8,7 @@
 	  {% if s.title == "Events" %}
         {% set count = 0 %} {% for page in s.pages %}
 		  {% set x = page.extra.youtube %}
-        <a href="{{ page.permalink | safe }}" class="blog-preview__post-link">
+        <a href="{{ page.permalink | safe }}" class="event-preview__post-link">
 				{% if page.extra.youtube %}
                   {% set id= page.extra.youtube | split(pat="https://www.youtube.com/watch?v=") | nth(n=1) %}
                       <iframe 
@@ -24,7 +24,7 @@
 				{% endif %}
           </a>
         {% endfor %}
-		<a href="./events" class="main__group-action">View all events</a>
       {% endif %} {% endfor %}
     </div>
+	<a href="./events" class="main__group-action">View all events</a>
 </section>

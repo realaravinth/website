@@ -107,11 +107,11 @@
 .main__group--card-coral {
   @include main__group--card;
   background-color: #fff;
-  flex-direction: row-reverse;
+  flex-direction: column;
   width: 70%;
+  height: auto;
 
   .main__group-content {
-    flex: 2;
   }
 }
 
@@ -170,12 +170,9 @@
 .blog-preview__post {
   border-radius: 5px;
   background-color: #f7f7f7;
-  height: 400px;
   overflow: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 40px;
-  padding-top: 40px;
-  padding-bottom: 0px;
   max-width: 350px;
   box-sizing: content-box;
 }
@@ -217,4 +214,10 @@
   font-size: 0.7rem;
   font-weight: 400;
   text-align: right;
+}
+
+.event-preview__youtube-link {
+  width: 980px;
+  height: 551px;
+  margin: 30px auto;
 }

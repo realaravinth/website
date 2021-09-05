@@ -8,20 +8,19 @@
 <div class="page__container">
     <h1 class="page__group-title--blog">{{ section.title }}</h1>
     <div class="page__group-content">
-        <div>
             <ul class="page__link-list">
                 {% for page in section.pages %}                
                   <a href="{{ page.permalink | safe }}" class="link-list__item">
                     <li>
                         <img 
-                          class="page__banner" 
+                          class="page__preview-banner" 
                           src="{{ page.extra.banner }}" 
                           alt="blog post banner"
                         />
                         <h2>{{ page.title }}</h2>
 						<span>{{ page.description | safe }} </span>
 						
-                        <p class="link-list__meta">
+                        <p class="blog__meta">
                           Posted {{  page.day }} 
 						  {{ macros::get_month(month=page.month) }},
                           {{ page.year }} by {{ page.extra.author }} 
@@ -31,7 +30,6 @@
                   </a>
                 {% endfor %}
             </ul>
-        </div>
     </div>
 </div>
 {% endblock content %}
