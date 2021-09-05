@@ -31,6 +31,12 @@
   @include md;
 }
 
+.page__preview-banner {
+  width: 10%;
+  height:  #{'min(250px, 50vh)'};
+  margin: 20px auto;
+}
+
 .page__banner {
   width: 100%;
   height:  #{'max(450px, 50vh)'};
