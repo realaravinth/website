@@ -11,6 +11,16 @@
   .main__group-action {
     @include btn;
   }
+
+  .main__group-title {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main__group-content {
+    width: 70%;
+    flex-direction: column;
+  }
 }
 
 .banner {
@@ -44,14 +54,15 @@
 }
 
 .main__group {
-  height: 73vh;
-  width: 90%;
+  height: 500px;
+  width: 85%;
+  margin: auto;
 }
 
 .main__group-content,
 .main__group-content--right,
 .main__group-content--left {
-  margin: 5px;
+  //  margin: 5px;
 }
 
 .main__group-content-title {
@@ -67,10 +78,10 @@
 }
 
 .blog-preview__post {
-  height: 45vh;
+  height: auto;
   overflow: hidden;
   padding: 20px;
-  padding-bottom: 0px;
+  padding-bottom: 20px;
   width: 70%;
   margin: auto;
 }
@@ -79,9 +90,18 @@
 .main__group--card-beige,
 .main__group--card-coral {
   @include main__group--card;
+  width: auto;
+  margin: auto;
+}
+
+.event-preview__post-link {
+  display: block;
+  margin: auto;
+  width: 100%;
 }
 
 .event-preview__youtube-link {
-  height: 150px;
-  width: 95%;
+  height: 40vw;
+  width: 70vw;
+  margin: auto;
 }
