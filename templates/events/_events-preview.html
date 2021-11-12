@@ -3,28 +3,33 @@
     <h2>Latest events</h2>
   </div>
   <div class="main__group-content">
-      {% for subsection in section.subsections %} 
-	  {% set s = get_section(path=subsection) %} 
-	  {% if s.title == "Events" %}
-        {% set count = 0 %} {% for page in s.pages %}
-		  {% set x = page.extra.youtube %}
+    {% for subsection in section.subsections %} 
+    {% set s = get_section(path=subsection) %} 
+    {% if s.title == "Events" %}
+      {% for page in s.pages %}
         <a href="{{ page.permalink | safe }}" class="event-preview__post-link">
-				{% if page.extra.youtube %}
-                  {% set id= page.extra.youtube | split(pat="https://www.youtube.com/watch?v=") | nth(n=1) %}
-                      <iframe 
-                        width="560"
-                        height="315"
-						class="event-preview__youtube-link"
-                        src="https://www.youtube-nocookie.com/embed/{{ id }}" 
-                        title="YouTube video player" 
-                        frameborder="0"
-                        allow="picture-in-picture" 
-                        allowfullscreen>
-                      </iframe>
-				{% endif %}
+            {% if page.extra.youtube %}
+              {% set id= page.extra.youtube | split(pat="https://www.youtube.com/watch?v=") | nth(n=1) %}
+              <iframe 
+                width="560"
+                height="315"
+                class="event-preview__youtube-link"
+                src="https://www.youtube-nocookie.com/embed/{{ id }}" 
+                title="YouTube video player" 
+                frameborder="0"
+                allow="picture-in-picture" 
+                allowfullscreen>
+              </iframe>
+            {% else %}
+              <img
+                height="315"
+                src={{ page.extra.banner }}
+              />
+            {% endif %}
           </a>
-        {% endfor %}
-      {% endif %} {% endfor %}
-    </div>
-	<a href="./events" class="main__group-action">View all events</a>
+        {% break %}
+      {% endfor %}
+    {% endif %} {% endfor %}
+  </div>
+  <a href="./events" class="main__group-action">View all events</a>
 </section>
