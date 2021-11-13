@@ -1,8 +1,7 @@
 +++
 title = "ReactX - Build an escape room game with React"
 date = 2021-11-14
-description = "Talk on Data Analytics and Machine Learning, a fun quiz and a Q&amp;A session with the speaker"
-
+description = "In this workshop we’ll be building a simple escape room game with ReactJs"
 [extra]
 banner = "/events/ReactX/banner.png"
 +++
