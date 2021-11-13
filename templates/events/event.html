@@ -18,9 +18,14 @@
     On {{ page.day }} {{ macros::get_month(month=page.month) }}, {{ page.year }}
   </p>
   <div class="page__group-content">
-    <h2>Event Recording</h2>
-    {% if page.extra.youtube %} {{
-    macros::embed_youtube(link=page.extra.youtube) }} {% endif %} {{
+    {% if page.extra.youtube %} 
+		<h2>Event Recording</h2>
+	{{ macros::embed_youtube(link=page.extra.youtube) }} 
+	{% else %}
+    <div>
+        <img src="{{ page.extra.banner }}" />
+    </div>
+	{% endif %} {{
     page.content | safe }}
   </div>
 </div>
