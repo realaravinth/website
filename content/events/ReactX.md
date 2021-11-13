@@ -7,6 +7,13 @@ description = "Talk on Data Analytics and Machine Learning, a fun quiz and a Q&a
 banner = "/events/ReactX/banner.png"
 +++
 
+## Details
+
+-   Registration link: [Google
+    Form](https://www.google.com/url?q=https://docs.google.com/forms/d/e/1FAIpQLSdUFgBIP-B8-sprFmXYsM2Ohnw7jvla0Blzong8LP-oZg0a5A/viewform?vc%3D0%26c%3D0%26w%3D1%26flr%3D0%26usp%3Dmail_form_link&source=gmail&ust=1636656883975000&usg=AFQjCNFVpKTFHqH_OZ-SqAR2_2AkJaVeJg)
+-   Meeting link:
+    [Zoom](https://zoom.us/j/96694113037?pwd=U0RQelBCOCsxM2JSc0pJZ056U2txQT09)
+
 ## What is React?
 
 React is an open-source and client-side JavaScript library which is
