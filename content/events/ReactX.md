@@ -4,7 +4,7 @@ date = 2021-11-14
 description = "In this workshop we’ll be building a simple escape room game with ReactJs"
 [extra]
 banner = "/events/ReactX/banner.png"
-youtube = "https://www.youtube.com/watch?v=lsz1tYBW-cw"
+youtube = "https://www.youtube.com/watch?v=UcpyoFNuPHI"
 +++
 
 ## Details
